@@ -4,18 +4,6 @@ import { greet } from "herron-island";
 const Http = new XMLHttpRequest();
 const Url = "https://tidesandcurrents.noaa.gov/cgi-bin/stationtideinfo.cgi?Stationid=9446583";
 const TidePredictionURL = new URL("https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&datum=MLLW&station=9446583&time_zone=lst_ldt&units=english&interval=hilo&format=json&application=NOS.COOPS.TAC.TidePred");
-/*
-Http.open("GET", Url);
-Http.send();
-
-Http.onreadystatechange = (e) => {
-    var x = Http.responseText;
-    console.log(Http.responseText)
-    greet(Http.responseText);
-}
-*/
-
-//wasm.greet();
 
 // If you only use `npm` you can simply
 // import { Chart } from "wasm-demo" and remove `setup` call from `bootstrap.js`.
@@ -104,10 +92,12 @@ function updatePlot() {
     TidePredictionURL.searchParams.set("end_date", tt.toLocaleDateString('en-GB').split('/').reverse().join(''));
     console.log(TidePredictionURL.toString());
 
-
     switch (selected.value) {
         // Leave potential for selecting different tide stations
-        case "tides":
+        case "9446583":
+            // McMicken Island: station=9446583 
+            TidePredictionURL.searchParams.set("station", 9446583);
+            console.log(TidePredictionURL)
             Http.open("GET", TidePredictionURL);
             Http.send();
             Http.onreadystatechange = (e) => {
