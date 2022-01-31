@@ -1,6 +1,3 @@
-import * as wasm from "hello-wasm-pack";
-import { greet } from "herron-island";
-
 const Http = new XMLHttpRequest();
 const Url = "https://tidesandcurrents.noaa.gov/cgi-bin/stationtideinfo.cgi?Stationid=9446583";
 const TidePredictionURL = new URL("https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=predictions&datum=MLLW&station=9446583&time_zone=lst_ldt&units=english&interval=hilo&format=json&application=NOS.COOPS.TAC.TidePred");
