@@ -103,6 +103,8 @@ function updatePlot() {
                 chart = Chart.tides("canvas", Http.responseText)
             }
         default:
+            TidePredictionURL.searchParams.set("station", selected.value);
+            console.log(TidePredictionURL)
             Http.open("GET", TidePredictionURL);
             Http.send();
             Http.onreadystatechange = (e) => {
