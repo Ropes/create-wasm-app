@@ -16,7 +16,6 @@
     <script src="./bootstrap.js"></script>
     <main>
       <canvas id="canvas" width="500" height="250"></canvas>
-      <div id="status">Loading WebAssembly...</div>
       <div id="control">
         <label for="plot-type">Tide Location: </label>
         <select id="plot-type">
@@ -30,6 +29,10 @@
           <option value="9449771">NOAA: Rosario, Orcas Island</option>
           <option value="9443090">NOAA: Neah Bay</option>
         </select>
+      </div>
+      <div display="block" width="500">
+        <div id="status" display="block" float="left"  width=200>Loading WebAssembly...</div>
+        <!--div id="coord" display="block" float="left"  width=200>Loading WebAssembly...</div-->
       </div>
     </main>
   </body>
