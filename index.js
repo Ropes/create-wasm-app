@@ -90,7 +90,6 @@ function updatePlot() {
     TidePredictionURL.searchParams.set("begin_date", ty.toLocaleDateString('en-GB').split('/').reverse().join(''));
     TidePredictionURL.searchParams.set("end_date", tt.toLocaleDateString('en-GB').split('/').reverse().join(''));
     console.log(TidePredictionURL.toString());
-    const j = { "predictions": [{ "t": "2022-05-28 04:17", "v": "13.733", "type": "H" }, { "t": "2022-05-28 11:32", "v": "-0.922", "type": "L" }, { "t": "2022-05-28 18:42", "v": "12.991", "type": "H" }, { "t": "2022-05-28 23:53", "v": "6.817", "type": "L" }, { "t": "2022-05-29 04:44", "v": "13.355", "type": "H" }, { "t": "2022-05-29 12:01", "v": "-1.516", "type": "L" }, { "t": "2022-05-29 19:25", "v": "13.647", "type": "H" }, { "t": "2022-05-30 00:41", "v": "7.462", "type": "L" }, { "t": "2022-05-30 05:12", "v": "12.925", "type": "H" }, { "t": "2022-05-30 12:31", "v": "-1.867", "type": "L" }, { "t": "2022-05-30 20:04", "v": "14.065", "type": "H" }] };
 
     switch (selected.value) {
         // Leave potential for selecting different tide stations
